@@ -3,6 +3,7 @@ import homeLogo from '../../assets/home.png'
 import logoFarmacia from '../../assets/logo_farmacia.png'
 import userImage from '../../assets/userLogo.png'
 import logoCart from '../../assets/shoppingCart.png'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 function Navbar() {
@@ -15,14 +16,16 @@ function Navbar() {
                 <img src={logoFarmacia} alt="" className="w-2/3"/>
             </div>
             <div className='flex gap-4'>
-                <div className='hover:underline'>Categorias</div>
-                <div className='hover:underline'>Cadastrar Categoria</div>
-                <div className="flex justify-center ">
-                    <img src={userImage} alt=""/>
-                </div>
-                <div className="flex justify-center ">
-                    <img src={logoCart} alt=""/>
-                </div>
+              <Link to='/login' className='hover:underline text-white'>Login</Link>
+              <Link to='/home' className='hover:underline text-white'>Home</Link>
+              <Link to='/categoria' className='hover:underline text-white'>Categorias</Link>
+              <Link to='/cadastro' className='hover:underline text-white'>Cadastrar categorias</Link>
+              <div className="flex justify-center ">
+                  <img src={userImage} alt=""/>
+              </div>
+              <div className="flex justify-center ">
+                  <img src={logoCart} alt=""/>
+              </div>
             </div>
           </div>
         </div>
